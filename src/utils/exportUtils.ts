@@ -15,7 +15,7 @@ export function exportToPDF(records: SalesRecord[], title: string = 'Sales Recor
   doc.text(`Total Records: ${records.length}`, 14, 36);
 
   const totalSales = records.reduce((sum, r) => sum + r.totalAmount, 0);
-  doc.text(`Total Sales: $${totalSales.toFixed(2)}`, 14, 42);
+  doc.text(`Total Sales: ₵${totalSales.toFixed(2)}`, 14, 42);
 
   const tableData = records.map((record) => [
     record.date,
@@ -23,8 +23,8 @@ export function exportToPDF(records: SalesRecord[], title: string = 'Sales Recor
     record.phoneNumber || 'N/A',
     record.machineType,
     record.quantity.toFixed(2),
-    `$${record.pricePerUnit.toFixed(2)}`,
-    `$${record.totalAmount.toFixed(2)}`,
+    `₵${record.pricePerUnit.toFixed(2)}`,
+    `₵${record.totalAmount.toFixed(2)}`,
     record.paymentType,
     record.notes || ''
   ]);
@@ -181,7 +181,7 @@ export function printRecords(records: SalesRecord[]) {
         </div>
         <div class="summary">
           <p><strong>Total Records:</strong> ${records.length}</p>
-          <p><strong>Total Sales:</strong> $${totalSales.toFixed(2)}</p>
+          <p><strong>Total Sales:</strong> ₵${totalSales.toFixed(2)}</p>
         </div>
         <table>
           <thead>
@@ -205,8 +205,8 @@ export function printRecords(records: SalesRecord[]) {
                 <td>${record.phoneNumber || 'N/A'}</td>
                 <td>${record.machineType}</td>
                 <td>${record.quantity.toFixed(2)}</td>
-                <td>$${record.pricePerUnit.toFixed(2)}</td>
-                <td>$${record.totalAmount.toFixed(2)}</td>
+                <td>₵${record.pricePerUnit.toFixed(2)}</td>
+                <td>₵${record.totalAmount.toFixed(2)}</td>
                 <td>${record.paymentType}</td>
                 <td>${record.notes || ''}</td>
               </tr>
