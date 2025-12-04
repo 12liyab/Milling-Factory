@@ -130,7 +130,7 @@ export default function SalesForm() {
             value={formData.phoneNumber}
             onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-            placeholder="Optional"
+            placeholder="Required"
           />
         </div>
 
@@ -220,7 +220,7 @@ export default function SalesForm() {
             value={formData.notes}
             onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-            placeholder="Optional remarks"
+            placeholder="Required"
           />
         </div>
 
