@@ -245,7 +245,7 @@ export default function MachineManagement() {
                       {machine.name}
                     </td>
                     <td className="px-6 py-4 text-sm text-gray-700">
-                      ₵{machine.basePrice.toFixed(2)}
+                      ${machine.basePrice.toFixed(2)}
                     </td>
                     <td className="px-6 py-4 text-sm text-gray-700">
                       {machine.unit}
