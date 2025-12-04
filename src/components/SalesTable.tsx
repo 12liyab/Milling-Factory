@@ -237,7 +237,7 @@ export default function SalesTable() {
                         />
                       </td>
                       <td className="px-4 py-3 text-sm">
-                        ₵{((editData.quantity || 0) * (editData.pricePerUnit || 0)).toFixed(2)}
+                        ${((editData.quantity || 0) * (editData.pricePerUnit || 0)).toFixed(2)}
                       </td>
                       <td className="px-4 py-3">
                         <select
@@ -284,8 +284,8 @@ export default function SalesTable() {
                       <td className="px-4 py-3 text-sm text-gray-700">{record.phoneNumber || 'N/A'}</td>
                       <td className="px-4 py-3 text-sm text-gray-700">{record.machineType}</td>
                       <td className="px-4 py-3 text-sm text-gray-700">{record.quantity.toFixed(2)}</td>
-                      <td className="px-4 py-3 text-sm text-gray-700">₵{record.pricePerUnit.toFixed(2)}</td>
-                      <td className="px-4 py-3 text-sm font-semibold text-gray-900">₵{record.totalAmount.toFixed(2)}</td>
+                      <td className="px-4 py-3 text-sm text-gray-700">${record.pricePerUnit.toFixed(2)}</td>
+                      <td className="px-4 py-3 text-sm font-semibold text-gray-900">${record.totalAmount.toFixed(2)}</td>
                       <td className="px-4 py-3">
                         <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
                           record.paymentType === 'Cash' ? 'bg-green-100 text-green-800' :
