@@ -190,7 +190,7 @@ export default function SalesForm() {
           <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg">
             <Calculator className="w-5 h-5 text-orange-500" />
             <span className="font-bold text-lg text-gray-800">
-              ${totalAmount.toFixed(2)}
+              ₵{totalAmount.toFixed(2)}
             </span>
           </div>
         </div>
