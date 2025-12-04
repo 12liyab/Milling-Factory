@@ -118,7 +118,7 @@ export default function Dashboard() {
             <DollarSign className="w-8 h-8 opacity-80" />
             <span className="text-sm font-medium opacity-90">Today</span>
           </div>
-          <p className="text-3xl font-bold">₵{analytics.todaySales.toFixed(2)}</p>
+          <p className="text-3xl font-bold">${analytics.todaySales.toFixed(2)}</p>
           <p className="text-sm opacity-90 mt-1">Total Sales</p>
         </div>
 
@@ -127,7 +127,7 @@ export default function Dashboard() {
             <TrendingUp className="w-8 h-8 opacity-80" />
             <span className="text-sm font-medium opacity-90">This Week</span>
           </div>
-          <p className="text-3xl font-bold">₵{analytics.weekSales.toFixed(2)}</p>
+          <p className="text-3xl font-bold">${analytics.weekSales.toFixed(2)}</p>
           <p className="text-sm opacity-90 mt-1">Weekly Sales</p>
         </div>
 
@@ -136,7 +136,7 @@ export default function Dashboard() {
             <TrendingUp className="w-8 h-8 opacity-80" />
             <span className="text-sm font-medium opacity-90">This Month</span>
           </div>
-          <p className="text-3xl font-bold">₵{analytics.monthSales.toFixed(2)}</p>
+          <p className="text-3xl font-bold">${analytics.monthSales.toFixed(2)}</p>
           <p className="text-sm opacity-90 mt-1">Monthly Sales</p>
         </div>
 
@@ -198,7 +198,7 @@ export default function Dashboard() {
                   y: {
                     beginAtZero: true,
                     ticks: {
-                      callback: (value) => `₵${value}`
+                      callback: (value) => `$${value}`
                     }
                   }
                 }
@@ -229,7 +229,7 @@ export default function Dashboard() {
                   y: {
                     beginAtZero: true,
                     ticks: {
-                      callback: (value) => `₵${value}`
+                      callback: (value) => `$${value}`
                     }
                   }
                 }
